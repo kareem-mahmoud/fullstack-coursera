@@ -1,10 +1,75 @@
 body {
-	padding: 0px;
-	margin: 0px;
-	font-family: arial;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f0f0;
 }
 
 .container {
-	padding: 30px 50px;
-	background: grey;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 50px;
+}
+
+.title {
+    position: relative;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    width: 150px;
+}
+
+.div1,.div2,.div3 {
+    position: relative;
+    padding: 20px;
+    padding-top: 80px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    width: 25%;
+    margin: auto;
+}
+
+.div1 > h2,.div2 > h2,.div3 > h2 {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    padding: 20px 30px;
+    background-color: black;
+    color: #fff;
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .div1 {
+        width: 43%;
+        margin-right: auto;
+    }
+    .div2 {
+        width: 43%;
+    }
+    .div3 {
+        width: 93%;
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 767px){
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .div1,.div2,.div3 {
+        width: 93%;
+        margin: 20px auto;
+    }
 }
